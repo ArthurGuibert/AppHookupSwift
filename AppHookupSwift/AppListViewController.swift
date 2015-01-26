@@ -44,10 +44,7 @@ class AppListViewController: UITableViewController, SKStoreProductViewController
         cell.appIcon?.image = app.image
         cell.appPublisher?.text = app.publisher
         cell.appPrice?.text = app.price;
-        
-        cell.appIcon.layer.cornerRadius = cell.appIcon.frame.size.width / 2
-        cell.appIcon.layer.masksToBounds = true
-        
+
         return cell
     }
     

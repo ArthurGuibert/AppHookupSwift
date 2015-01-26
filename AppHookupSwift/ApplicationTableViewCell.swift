@@ -23,6 +23,10 @@ class ApplicationTableViewCell: UITableViewCell {
         border.backgroundColor = UIColor(white: 0.9, alpha: 1).CGColor
         border.zPosition = 10
         self.layer.addSublayer(border)
+        
+        // Set the corner so that the icon is a circle, wow, such a nice effect.
+        self.appIcon.layer.cornerRadius = self.appIcon.frame.size.width / 2
+        self.appIcon.layer.masksToBounds = true
     }
     
 }
