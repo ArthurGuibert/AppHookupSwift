@@ -13,4 +13,4 @@ Don't expect too much from this project. It's just an afternoon project in order
 * [iTunes Search API](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 
 ## Contact
-You can reach by [email](mailto:birslip@gmail.com) or on [twitter](https://twitter.com/birslip)! Don't hesitate to say hi :)
+You can reach me by [email](mailto:birslip@gmail.com) or on [twitter](https://twitter.com/birslip)! Don't hesitate to say hi :)
