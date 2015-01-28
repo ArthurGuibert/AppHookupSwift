@@ -43,9 +43,9 @@ class AppListViewController: UITableViewController, SKStoreProductViewController
         var cell = tableView.dequeueReusableCellWithIdentifier("ApplicationCell") as ApplicationTableViewCell
         
         cell.appName!.text = app.title
-        cell.appIcon?.image = app.image
-        cell.appPublisher?.text = app.publisher
-        cell.appPrice?.text = app.price;
+        cell.appIcon!.image = app.image
+        cell.appPublisher!.text = app.publisher
+        cell.appPrice!.text = app.price;
 
         return cell
     }
