@@ -20,7 +20,8 @@ class AppListViewController: UITableViewController, SKStoreProductViewController
         var nib = UINib(nibName: "ApplicationTableViewCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "ApplicationCell")
         
-        tableView.separatorColor = UIColor(white: 1, alpha: 1)
+        // Hiding separator
+        tableView.separatorColor = UIColor(white: 1, alpha: 0)
         
         // Fetching the application online
         Application.fetchApplications("hot", {(applications: Array<Application>) -> Void in
@@ -36,6 +37,7 @@ class AppListViewController: UITableViewController, SKStoreProductViewController
         }
     }
     
+    // UITableView handling
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let app: Application = applications[indexPath.row]
         var cell = tableView.dequeueReusableCellWithIdentifier("ApplicationCell") as ApplicationTableViewCell
@@ -68,6 +70,7 @@ class AppListViewController: UITableViewController, SKStoreProductViewController
         viewController.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    // Sorting options
     @IBAction func order(sender: AnyObject) {
         let sheet = UIActionSheet(title: "Sorting options", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "hot", "new")
         sheet.showInView(UIApplication.sharedApplication().keyWindow)
